@@ -28,6 +28,8 @@ GLOBAL.config = config; // TODO find a way to inject config in app
 
 var app = require('../app');
 
+app.set('port', config.webPort || 3001);
+
 var server = app.listen(app.get('port'), function() {
   debug('Express server listening on port ' + server.address().port);
 });
