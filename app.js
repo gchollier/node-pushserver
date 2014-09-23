@@ -69,6 +69,10 @@ mongoose.connection.on('disconnected', function () {
   logger.error('Mongoose default connection disconnected');
 });
 
+// Creating push association manager
+var pushAssociationManager = new PushAssociationManager(config.removeDuplicatedDevices || false, logger);
+app.pushAssociationManager = pushAssociationManager;
+
 // Creating APN
 var apnConnection = new apn.Connection(config.apn.connection);
 var apnFeedbackConnection = new apn.Feedback(config.apn.feedback);
@@ -78,10 +82,9 @@ app.apnManager = apnManager;
 
 // Creating GCM sender
 var gcmSender = new gcm.Sender(config.gcm.apiKey);
-var gcmManager = new GcmManager();
+var gcmManager = new GcmManager(gcmSender, pushAssociationManager, logger);
 
-var pushAssociationManager = new PushAssociationManager(config.removeDuplicatedDevices || false, logger);
-app.pushAssociationManager = pushAssociationManager;
+
 
 
 apnManager.on('deviceToRemove', function (device){
