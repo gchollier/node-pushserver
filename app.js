@@ -70,9 +70,12 @@ mongoose.connection.on('disconnected', function () {
 });
 
 // Creating APN
-var apnConnection = new apn.Connection(config.apn);
+var apnConnection = new apn.Connection(config.apn.conection);
 
-var apnManager = new ApnManager(apnConnection, logger);
+var apnFeedbackConnection = new apn.Feedback(config.apn.feedback);
+
+
+var apnManager = new ApnManager(apnConnection, apnFeedbackConnection, logger);
 app.apnManager = apnManager;
 
 // Creating GCM sender

@@ -42,13 +42,13 @@ function sendNotifications(notifs, pushController, pushAssociationManager) {
         }
 
         if(users){
-            pushAssociationManager.getForUsers(function(err, associations){
+            pushAssociationManager.getForUsers(users, function(err, associations){
                 traitSend(err, associations);
             });
 
         }else{
 
-            pushAssociationManager.getAll(users, function(err, associations){
+            pushAssociationManager.getAll(function(err, associations){
                 traitSend(err, associations);
             });
         }
