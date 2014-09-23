@@ -68,7 +68,7 @@ app.apnManager = apnManager;
 var gcmSender = new gcm.Sender(config.gcm.apiKey);
 var gcmManager = new GcmManager();
 
-var pushAssociationManager = new PushAssociationManager();
+var pushAssociationManager = new PushAssociationManager(config.removeDuplicatedDevices || false);
 app.pushAssociationManager = pushAssociationManager;
 
 // Creating Manager

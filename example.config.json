@@ -35,5 +35,6 @@
                 "handleExceptions": true
             }
         }
-    }
+    },
+    "removeDuplicatedDevices": true
 }
