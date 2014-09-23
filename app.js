@@ -1,6 +1,6 @@
 var express = require('express');
 var _ = require('lodash');
-var pushAssociations = require('./lib/push-association-manager');
+var PushAssociationManager = require('./lib/push-association-manager');
 var pushController = require('./lib/PushController');
 var winston = require('winston');
 var winstonEmail = require('winston-mail').Mail;
@@ -10,6 +10,8 @@ var apn = require('apn');
 var app = express();
 var ApnManager = require('./lib/apn-manager');
 var GcmManager = require('./lib/gcm-manager');
+var PushManager = require('./lib/push-manager');
+
 var gcm = require('node-gcm');
 
 // Creating logger 
@@ -36,6 +38,13 @@ var logger = new (winston.Logger)({
 
 app.logger = logger;
 
+// Connecting to mongo 
+mongoose.connect(config.database, function(err){
+    if(err) {
+        throw err;
+    }
+});
+
 // Creating APN
 var apnConnection = new apn.Connection(config.apn);
 
@@ -46,12 +55,10 @@ app.apnManager = apnManager;
 var gcmSender = new gcm.Sender(config.get('gcm').apiKey);
 var gcmManager = new GcmManager();
 
-// Connecting to mongo 
-mongoose.connect(config.database, function(err){
-    if(err) {
-        throw err;
-    }
-});
+var pushAssociationManager = new PushAssociationManager();
+
+// Creating Manager
+var pushManager = new PushManager(apnManager, gcmManager, pushAssociationManager, logger);
 
 // Middleware
 app.use(express.compress());
