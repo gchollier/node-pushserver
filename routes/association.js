@@ -5,20 +5,20 @@ var _ = require('lodash');
 router.post('/subscribe', function (req, res) {
     var deviceInfo = req.body;
 
-    var pushController = req.app.pushController;
-    pushController.subscribe(deviceInfo);
+    var pushManager = req.app.pushManager;
+    pushManager.subscribe(deviceInfo);
     res.send();
 });
 
 router.post('/unsubscribe', function (req, res) {
     var data = req.body;
-    var pushController = req.app.pushController;
+    var pushManager = req.app.pushManager;
 
     if (data.user) {
-        pushController.unsubscribeUser(data.user);
+        pushManager.unsubscribeUser(data.user);
         console.log(new Date().toString() + ": Unsubscribed user " + data.user );
     } else if (data.token) {
-        pushController.unsubscribeDevice(data.token);
+        pushManager.unsubscribeDevice(data.token);
         console.log(new Date().toString() + ": Unsubscribed token " + data.token );
     } else {
         return res.status(503).send();
@@ -55,8 +55,8 @@ router.get('/users', function (req, res) {
 });
 
 router.delete('/users/:user', function (req, res) {
-	var pushController = req.app.pushController;
-    pushController.unsubscribeUser(req.params.user);
+	var pushManager = req.app.pushManager;
+    pushManager.unsubscribeUser(req.params.user);
     res.send('ok');
 });
 
