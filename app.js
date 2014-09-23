@@ -70,10 +70,8 @@ mongoose.connection.on('disconnected', function () {
 });
 
 // Creating APN
-var apnConnection = new apn.Connection(config.apn.conection);
-
+var apnConnection = new apn.Connection(config.apn.connection);
 var apnFeedbackConnection = new apn.Feedback(config.apn.feedback);
-
 
 var apnManager = new ApnManager(apnConnection, apnFeedbackConnection, logger);
 app.apnManager = apnManager;
@@ -84,6 +82,13 @@ var gcmManager = new GcmManager();
 
 var pushAssociationManager = new PushAssociationManager(config.removeDuplicatedDevices || false, logger);
 app.pushAssociationManager = pushAssociationManager;
+
+
+apnManager.on('deviceToRemove', function (device){
+    // We can no reuse removeDeviceByToken here so me use callback
+    logger.info("Received a deviceToRemove event for device " + device);
+    pushAssociationManager.removeDevice(device);
+});
 
 // Creating Manager
 var pushManager = new PushManager(apnManager, gcmManager, pushAssociationManager, logger);

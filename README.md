@@ -61,7 +61,24 @@ If you checked out this project from github, you can find a configuration file e
             "interval": 43200,
             "batchFeedback": true
         }
-    }
+    },
+    "logger" : {
+        "transports": {
+            "Console": {
+                "timestamp": true,
+                "colorize": true,
+                "handleExceptions": true
+            },
+            "Mail": {
+                "from": "pushserver@localhost.com",
+                "to": "pushadmin@localhost.com",
+                "host": "smtp.localhost.com",
+                "level": "error",
+                "handleExceptions": true
+            }
+        }
+    },
+    "removeDuplicatedDevices": true
 }
 
 ```
