@@ -1,7 +1,7 @@
 var express = require('express');
 var _ = require('lodash');
 var PushAssociationManager = require('./lib/push-association-manager');
-var pushController = require('./lib/PushController');
+var PushManager = require('./lib/push-manager');
 var winston = require('winston');
 var winstonEmail = require('winston-mail').Mail;
 var mongoose = require('mongoose');
@@ -56,9 +56,12 @@ var gcmSender = new gcm.Sender(config.get('gcm').apiKey);
 var gcmManager = new GcmManager();
 
 var pushAssociationManager = new PushAssociationManager();
+app.pushAssociationManager = pushAssociationManager;
 
 // Creating Manager
 var pushManager = new PushManager(apnManager, gcmManager, pushAssociationManager, logger);
+app.pushManager = pushManager;
+
 
 // Middleware
 app.use(express.compress());
