@@ -26,3 +26,4 @@ Thumbs.db
 cert/
 config.json
 node_modules/
+capistrano/
