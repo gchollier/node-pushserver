@@ -6,7 +6,6 @@
     "gcm": {
         "apiKey": "YOUR_API_KEY_HERE"
     },
-
     "apn": {
         "connection": {
             "gateway": "gateway.sandbox.push.apple.com",
@@ -19,6 +18,22 @@
             "key": "/path/to/key.pem",
             "interval": 43200,
             "batchFeedback": true
+        }
+    },
+    "logger" : {
+        "transports": {
+            "Console": {
+                "timestamp": true,
+                "colorize": true,
+                "handleExceptions": true
+            },
+            "Mail": {
+                "from": "pushserver@localhost.com",
+                "to": "pushadmin@localhost.com",
+                "host": "smtp.localhost.com",
+                "level": "error",
+                "handleExceptions": true
+            }
         }
     }
 }
