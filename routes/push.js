@@ -6,8 +6,8 @@ router.post('/send', function (req, res) {
     var notifs = [req.body];
 
     var pushManager = req.app.pushManager;
-    var pushAssociations = req.app.pushAssociations;
-    var notificationsValid = sendNotifications(notifs, pushManager, pushAssociations);
+    var pushAssociationManager = req.app.pushAssociationManager;
+    var notificationsValid = sendNotifications(notifs, pushManager, pushAssociationManager);
 
     res.status(notificationsValid ? 200 : 400).send();
 });
@@ -16,13 +16,13 @@ router.post('/sendBatch', function (req, res) {
     var notifs = req.body.notifications;
 
     var pushManager = req.app.pushManager;
-    var pushAssociations = req.app.pushAssociations;
-    var notificationsValid = sendNotifications(notifs, pushManager, pushAssociations);
+    var pushAssociationManager = req.app.pushAssociationManager;
+    var notificationsValid = sendNotifications(notifs, pushManager, pushAssociationManager);
     res.status(notificationsValid ? 200 : 400).send();
 });
 
 // Helpers
-function sendNotifications(notifs,  pushAssociations, pushController) {
+function sendNotifications(notifs, pushController, pushAssociationManager) {
     var areNotificationsValid = _(notifs).map(validateNotification).min().value();
 
     if (!areNotificationsValid) return false;
@@ -41,21 +41,30 @@ function sendNotifications(notifs,  pushAssociations, pushController) {
             target = 'android';
         }
 
-        var fetchUsers = users ? pushAssociations.getForUsers : pushAssociations.getAll,
-            callback = function (err, pushAssociations) {
-                if (err) return;
+        if(users){
+            pushAssociationManager.getForUsers(function(err, associations){
+                traitSend(err, associations);
+            });
 
-                if (target !== 'all') {
-                    // TODO: do it in mongo instead of here ...
-                    pushAssociations = _.where(pushAssociations, {'type': target});
-                }
+        }else{
 
-                pushController.send(pushAssociations, androidPayload, iosPayload);
-            },
-            args = users ? [users, callback] : [callback];
+            pushAssociationManager.getAll(users, function(err, associations){
+                traitSend(err, associations);
+            });
+        }
 
-        // TODO: optim. -> mutualise user fetching ?
-        fetchUsers.apply(null, args);
+        function traitSend(err, associations)
+        {
+            if (err) throw err;
+
+            if (target !== 'all') {
+                // TODO: do it in mongo instead of here ...
+                associations = _.where(associations, {'type': target});
+            }
+
+            pushController.send(associations, androidPayload, iosPayload);
+
+        }
     });
 
     return true;

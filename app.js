@@ -52,10 +52,21 @@ var logger = new (winston.Logger)({
 app.logger = logger;
 
 // Connecting to mongo 
-mongoose.connect(config.mongodbUrl, function(err){
-    if(err) {
-        throw err;
-    }
+mongoose.connect(config.mongodbUrl);
+
+// When successfully connected
+mongoose.connection.on('connected', function () {
+  logger.info('Mongoose default connection open');
+});
+
+// If the connection throws an error
+mongoose.connection.on('error',function (err) {
+  logger.error('Mongoose default connection error: ' + err);
+});
+ 
+// When the connection is disconnected
+mongoose.connection.on('disconnected', function () {
+  logger.error('Mongoose default connection disconnected');
 });
 
 // Creating APN
@@ -68,7 +79,7 @@ app.apnManager = apnManager;
 var gcmSender = new gcm.Sender(config.gcm.apiKey);
 var gcmManager = new GcmManager();
 
-var pushAssociationManager = new PushAssociationManager(config.removeDuplicatedDevices || false);
+var pushAssociationManager = new PushAssociationManager(config.removeDuplicatedDevices || false, logger);
 app.pushAssociationManager = pushAssociationManager;
 
 // Creating Manager
