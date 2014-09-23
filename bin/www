@@ -5,8 +5,6 @@ var program = require('commander');
 var fs = require('fs');
 var path = require('path');
 var debug = require('debug')('PushServer');
-var app = require('../app');
-
 
 program.version(pack.version)
     .option("-c --config <configPath>", "Path to config file")

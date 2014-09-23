@@ -11,11 +11,24 @@ var app = express();
 var ApnManager = require('./lib/apn-manager');
 var GcmManager = require('./lib/gcm-manager');
 var PushManager = require('./lib/push-manager');
-
+var bodyParser = require('body-parser');
 var gcm = require('node-gcm');
 
 // Creating logger 
 var transports = [];
+
+if(config.logger === undefined)
+{
+    config.logger = {
+        transposrts : {
+            Console: {
+                timestamp: true,
+                colorize: true,
+                handleExceptions: true
+            }
+        }
+    };
+}
 
 for(var type in config.logger.transports)
 {
@@ -39,7 +52,7 @@ var logger = new (winston.Logger)({
 app.logger = logger;
 
 // Connecting to mongo 
-mongoose.connect(config.database, function(err){
+mongoose.connect(config.mongodbUrl, function(err){
     if(err) {
         throw err;
     }
@@ -52,7 +65,7 @@ var apnManager = new ApnManager(apnConnection, logger);
 app.apnManager = apnManager;
 
 // Creating GCM sender
-var gcmSender = new gcm.Sender(config.get('gcm').apiKey);
+var gcmSender = new gcm.Sender(config.gcm.apiKey);
 var gcmManager = new GcmManager();
 
 var pushAssociationManager = new PushAssociationManager();
@@ -62,12 +75,10 @@ app.pushAssociationManager = pushAssociationManager;
 var pushManager = new PushManager(apnManager, gcmManager, pushAssociationManager, logger);
 app.pushManager = pushManager;
 
-
 // Middleware
-app.use(express.compress());
-app.use(express.bodyParser());
+app.use(bodyParser.json());
 
-app.use(express.static(__dirname + '/../public'));
+app.use(express.static(__dirname + '/public'));
 
 app.use(function(err, req, res, next) {
     res.status(500);
