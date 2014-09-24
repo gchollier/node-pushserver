@@ -1,0 +1,433 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"jquery",
+				"jquery-ui"
+			],
+			[
+				"mongo",
+				"mongoose"
+			],
+			[
+				"xeeFr",
+				"xeeFrameworkObject"
+			],
+			[
+				"event",
+				"eventworker"
+			],
+			[
+				"is",
+				"isset"
+			],
+			[
+				"car",
+				"carId"
+			],
+			[
+				"json",
+				"json_decode"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 167.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remoce",
+				"Package Control: Remove Package"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"markdo",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"markdown",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"install g",
+				"Package Control: Install Package"
+			],
+			[
+				"git commit",
+				"Git: Commit"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"previe",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"ping google.fr"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/grimfor/Eliocity/Projects/pushserver"
+	],
+	"file_history":
+	[
+		"/Users/grimfor/Eliocity/Projects/support/config.json",
+		"/Users/grimfor/Eliocity/Projects/support/routes/event/event.js",
+		"/Users/grimfor/Eliocity/Projects/support/views/event/list.jade",
+		"/Users/grimfor/Eliocity/Projects/support/.gitignore",
+		"/Users/grimfor/Eliocity/Projects/support/middlewares/authentication.js",
+		"/Users/grimfor/Eliocity/Projects/support/views/errors/404.jade",
+		"/Users/grimfor/Eliocity/Projects/support/views/errors/403.jade",
+		"/Users/grimfor/Eliocity/Projects/support/config.json.dist",
+		"/Users/grimfor/Eliocity/Projects/support/routes/ajax/event-api/push-server.js",
+		"/Users/grimfor/Eliocity/Projects/support/views/car/data.jade",
+		"/Users/grimfor/Eliocity/Projects/support/views/car/locations.jade",
+		"/Users/grimfor/Eliocity/Projects/support/routes/car/locations.js",
+		"/Users/grimfor/Eliocity/Projects/support/views/layout.jade",
+		"/Users/grimfor/Eliocity/Projects/support/routes/car/data.js",
+		"/Users/grimfor/Eliocity/Projects/support/CHANGELOG.md",
+		"/Users/grimfor/Eliocity/Projects/support/app.js",
+		"/Users/grimfor/Eliocity/Projects/support/package.json",
+		"/Users/grimfor/Eliocity/Projects/support/.codeintel/config",
+		"/Users/grimfor/Library/Application Support/Sublime Text 3/Packages/User/SublimeCodeIntel.sublime-settings",
+		"/Users/grimfor/Eliocity/Projects/support/.jshintrc",
+		"/Users/grimfor/Library/Application Support/Sublime Text 3/Packages/JSHint Gutter/JSHint.sublime-settings",
+		"/Users/grimfor/Eliocity/Projects/support/node_modules/winston/node_modules/request/tests/test-qs.js",
+		"/Users/grimfor/Eliocity/Projects/support/node_modules/xee-node-framework/lib/http/monitoring-query.js",
+		"/Users/grimfor/Eliocity/Projects/support/node_modules/mathjs/lib/expression/node/IndexNode.js",
+		"/Users/grimfor/Eliocity/Projects/support/routes/index.js",
+		"/Users/grimfor/Eliocity/Projects/support/node_modules/monk/test/promises-A.js",
+		"/Users/grimfor/Eliocity/Projects/support/node_modules/monk/node_modules/mongoskin/examples/insert.js",
+		"/Users/grimfor/Eliocity/Projects/support/node_modules/winston/lib/winston.js",
+		"/Users/grimfor/Eliocity/Projects/support/node_modules/mathjs/docs/getting_started.md",
+		"/Users/grimfor/Eliocity/Projects/support/node_modules/winston/node_modules/request/tests/test-follow-all.js",
+		"/Users/grimfor/Eliocity/Projects/support/support.sublime-project",
+		"/Users/grimfor/Eliocity/Projects/xeecloud/support/index.php",
+		"/Users/grimfor/Eliocity/Projects/xeecloud/code/vendor/symfony/symfony/src/Symfony/Component/Process/Tests/ProcessInSigchildEnvironment.php",
+		"/Users/grimfor/Eliocity/Projects/support/config/deploy.rb",
+		"/Users/grimfor/Eliocity/Projects/eventapi/capistrano/config/deploy.rb",
+		"/Users/grimfor/Eliocity/Projects/support/config/deploy/dev.rb",
+		"/Users/grimfor/Eliocity/Projects/xeecloud/capistrano/config/deploy.rb",
+		"/Users/grimfor/Dropbox/passwords.md",
+		"/Users/grimfor/Desktop/testDeploy/config/deploy.rb",
+		"/Users/grimfor/Desktop/testDeploy/config/deploy/development.rb",
+		"/Users/grimfor/Desktop/testDeploy/Capfile",
+		"/Users/grimfor/Desktop/testDeploy/config/deploy/staging.rb",
+		"/Users/grimfor/Desktop/testDeploy/config/development.rb",
+		"/Users/grimfor/Eliocity/Google Drive/xeecloud.sql",
+		"/Users/grimfor/Desktop/FollowTheLeader/www/bin",
+		"/Users/grimfor/Desktop/FollowTheLeader/www/bin.js",
+		"/Users/grimfor/Desktop/GRANT SELECT ON xeecloud.* TO 'gbailleul'@'localho",
+		"/Users/grimfor/vagrant/xeedev/Vagrantfile",
+		"/Users/grimfor/Eliocity/Projects/commands/StartServer.command",
+		"/Users/grimfor/Desktop/StartServer.sh",
+		"/Users/grimfor/Desktop/xee.com/xeeprod.sql",
+		"/Users/grimfor/Eliocity/Projects/XeeCoreApi/code/app/config/parameters.yml",
+		"/Users/grimfor/Desktop/Untitled.sql",
+		"/Volumes/OSX/README.md",
+		"/Users/grimfor/Desktop/cassandra.sql",
+		"/Users/grimfor/Downloads/AdminLTE-master/index.html",
+		"/Users/grimfor/Downloads/AdminLTE-master/pages/UI/general.html",
+		"/Users/grimfor/Desktop/id.txt",
+		"/Users/grimfor/Eliocity/Projects/XeeCoreApi/code/src/Eliocity/OauthBundle/Controller/RegistrationController.php",
+		"/Users/grimfor/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
+		"/Users/grimfor/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/grimfor/Eliocity/Projects/XeeCoreApi/code/web/i.php",
+		"/Users/grimfor/Eliocity/Projects/XeeCoreApi/code/vendor/phpunit/phpunit/PHPUnit/Framework/Constraint/IsNull.php",
+		"/Users/grimfor/Eliocity/Projects/XeeCoreApi/code/vendor/phpunit/php-token-stream/Tests/_files/classInScopedNamespace.php",
+		"/Users/grimfor/Desktop/v2.md",
+		"/Users/grimfor/Eliocity/Projects/XeeCoreApi/support/doc/src/v2.md",
+		"/Users/grimfor/Desktop/v1.md",
+		"/Users/grimfor/PhpstormProjects/RedisCache/src/Grimfor/Bundle/BlogBundle/Entity/User.php",
+		"/Users/grimfor/PhpstormProjects/RedisCache/src/Grimfor/Bundle/BlogBundle/Entity/Post.php",
+		"/Users/grimfor/PhpstormProjects/RedisCache/src/Grimfor/Bundle/BlogBundle/Entity/BaseEntity.php",
+		"/Volumes/Image disque/critical.md",
+		"/Users/grimfor/Desktop/0970 809 116",
+		"/Users/grimfor/Eliocity/Projects/node_modules/express/feedback-1.3.4",
+		"/Users/grimfor/Desktop/push_users/xeecarpushent.xee.com.js",
+		"/Users/grimfor/Desktop/push_users/xecarpush.xee.com",
+		"/Users/grimfor/Desktop/push_users/script.js",
+		"/Users/grimfor/Desktop/licence delivrary:",
+		"/Users/grimfor/Desktop/bug_locufier/start.log",
+		"/Users/grimfor/Desktop/bug_locufier/repro_ruben.log",
+		"/Users/grimfor/Desktop/bug_locufier/bug_locufier_5 minutes.log",
+		"/Users/grimfor/Desktop/erreur.log",
+		"/Users/grimfor/Desktop/bug_locufier_resolution_spontannee.log",
+		"/Users/grimfor/Desktop/production.log",
+		"/Users/grimfor/Desktop/access.log",
+		"/Users/grimfor/Desktop/PushTestMay/readme.md",
+		"/Users/grimfor/Desktop/nauroto",
+		"/Users/grimfor/Eliocity/Projects/XeeEventManager/support/doc/v2.md",
+		"/Users/grimfor/Eliocity/Projects/XeeEventManager/support/doc/templates/slate-multi.jade",
+		"/Users/grimfor/Eliocity/Projects/XeeEventManager/support/doc/templates/xee.jade ",
+		"/Users/grimfor/Desktop/post.json",
+		"/Users/grimfor/Desktop/v2/blueprint/main.md",
+		"/Users/grimfor/Desktop/com.xee.pushtest",
+		"/Users/grimfor/CloudStation/passwords.md",
+		"/Users/grimfor/Eliocity/Google Drive/crypted.dmg",
+		"/Users/grimfor/Desktop/08604021",
+		"/Users/grimfor/Desktop/test.md",
+		"/Users/grimfor/Eliocity/Google Drive/Untitled.sql",
+		"/Users/grimfor/Desktop/ZRANGEBYSCORE myset -inf +inf WITHSCORES LIMIT 0 1",
+		"/Users/grimfor/Eliocity/Projects/XeeCoreApi/support/client.conf.php",
+		"/Users/grimfor/grimfor@grimfor.fr",
+		"/Users/grimfor/Desktop/digital ocean.txt",
+		"/Users/grimfor/Desktop/vps classic ovh 1.txt",
+		"/Users/grimfor/Eliocity/Google Drive/em.sql",
+		"/Users/grimfor/Eliocity/Google Drive/rqt.sql",
+		"/Users/grimfor/dumps/Testing20140321.sql",
+		"/Users/grimfor/Eliocity/Labs/coach/coach/__init__.py",
+		"/Users/grimfor/Eliocity/Koach/besoin.md",
+		"/Users/grimfor/Dropbox/serials.md",
+		"/Users/grimfor/Desktop/backup_api_dev_20140123.sql",
+		"/Users/grimfor/Eliocity/Projects/startservers.sh",
+		"/Users/grimfor/Desktop/test.php",
+		"/Users/grimfor/Eliocity/Labs/SlimEventManager/composer.json",
+		"/Users/grimfor/Eliocity/Labs/jsondecode.php",
+		"/Users/grimfor/Eliocity/Projects/XeePushServer/test_cert.sh",
+		"/Users/grimfor/Eliocity/Projects/log.sh",
+		"/Users/grimfor/Dropbox/restarttrial.sh",
+		"/Users/grimfor/Dropbox/serveur/raspbian/blog.grimfor.fr.sh",
+		"/Users/grimfor/Dropbox/serveur/raspbian/arch-raspberry/general.sh",
+		"/Users/grimfor/Dropbox/serveur/raspbian/webserver.sh",
+		"/Users/grimfor/Dropbox/serveur/raspbian/bind9.sh",
+		"/Users/grimfor/Dropbox/serveur/raspbian/general.sh",
+		"/Users/grimfor/Dropbox/jt/result.md",
+		"/Users/grimfor/Dropbox/jt/resume.md",
+		"/Users/grimfor/Desktop/TODO",
+		"/Users/grimfor/Dropbox/serveur/raspbian/arch-raspberry/blog.grimfor.fr",
+		"/Users/grimfor/Desktop/api_dev.sql",
+		"/Users/grimfor/Eliocity/Vagrant/Vagrantfile",
+		"/Users/grimfor/Eliocity/Projects/XeeCoreApi/support/client.php"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"/developer/",
+			"Look",
+			"vmware",
+			"ware",
+			"Defaul",
+			"v.mem",
+			"ovh",
+			"event",
+			"v1/car/",
+			"POST",
+			"history",
+			"client_id",
+			"Device",
+			"Action",
+			"Header",
+			"client/{client_identifier}/",
+			"app/{app_identifier}",
+			"client/{client_identifier}",
+			"application",
+			"1394783370",
+			"1394723370",
+			"200",
+			"50",
+			"CLient_scope",
+			"sosh",
+			"repos",
+			"400",
+			"getData"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"client/{client_identifier}",
+			"app/{app_identifier}",
+			"1394793370",
+			"1394783370"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "/Users/grimfor/Eliocity/Projects/pushserver"
+		}
+	],
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 100.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 100.0
+	},
+	"project": "",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 255.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
