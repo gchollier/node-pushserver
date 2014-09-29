@@ -1,6 +1,19 @@
 var express = require('express');
 var router = express.Router();
 var _ = require('lodash');
+var fs = require('fs');
+
+router.get('/version', function (req, res) {
+    fs.readFile('CHANGELOG.md', 'utf8', function (err,data) {
+        if (err) {
+            return console.log(err);
+            res.status(500).send(err);
+        }
+
+        res.type('text/x-markdown; charset=UTF-8');
+        res.send(data);
+    });
+});
 
 router.post('/send', function (req, res) {
     var notifs = [req.body];
@@ -9,7 +22,7 @@ router.post('/send', function (req, res) {
     var pushAssociationManager = req.app.pushAssociationManager;
     var notificationsValid = sendNotifications(notifs, pushManager, pushAssociationManager);
 
-    res.status(notificationsValid ? 200 : 400).send();
+    res.status(notificationsValid ? 200 : 400).send({});
 });
 
 router.post('/sendBatch', function (req, res) {
@@ -18,7 +31,7 @@ router.post('/sendBatch', function (req, res) {
     var pushManager = req.app.pushManager;
     var pushAssociationManager = req.app.pushAssociationManager;
     var notificationsValid = sendNotifications(notifs, pushManager, pushAssociationManager);
-    res.status(notificationsValid ? 200 : 400).send();
+    res.status(notificationsValid ? 200 : 400).send({});
 });
 
 // Helpers

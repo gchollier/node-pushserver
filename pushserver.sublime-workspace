@@ -132,10 +132,30 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/grimfor/Eliocity/Projects/pushserver"
+		"/Users/grimfor/Eliocity/Eliocity Projects/pushserver",
+		"/Users/grimfor/Eliocity/Eliocity Projects/pushserver/public",
+		"/Users/grimfor/Eliocity/Eliocity Projects/pushserver/public/css",
+		"/Users/grimfor/Eliocity/Eliocity Projects/pushserver/public/lib"
 	],
 	"file_history":
 	[
+		"/Users/grimfor/Eliocity/Eliocity Projects/xee-node-framework/README.md",
+		"/Users/grimfor/Eliocity/Eliocity Projects/xee-node-framework/lib/http/client-query.js",
+		"/Users/grimfor/Eliocity/Eliocity Projects/xee-node-framework/lib/http/event-query.js",
+		"/Users/grimfor/Eliocity/Eliocity Projects/xee-node-framework/lib/http/oauth2-client.js",
+		"/Users/grimfor/Eliocity/Eliocity Projects/xee-node-framework/lib/http/phone-query.js",
+		"/Users/grimfor/Eliocity/Eliocity Projects/xee-node-framework/lib/http/request.js",
+		"/Users/grimfor/Eliocity/Eliocity Projects/xee-node-framework/lib/http/address-query.js",
+		"/Users/grimfor/Eliocity/Eliocity Projects/xee-node-framework/lib/http/car-query.js",
+		"/Users/grimfor/Eliocity/Eliocity Projects/xee-node-framework/lib/http/user-query.js",
+		"/Users/grimfor/Eliocity/Eliocity Projects/xee-node-framework/.jshintrc",
+		"/Users/grimfor/Eliocity/Eliocity Projects/xee-node-framework/index.js",
+		"/Users/grimfor/Eliocity/Eliocity Projects/xee-node-framework/lib/model/client.js",
+		"/Users/grimfor/Eliocity/Eliocity Projects/xee-node-framework/lib/http/monitoring-query.js",
+		"/Users/grimfor/Eliocity/Eliocity Projects/xee-node-framework/lib/http/data-query.js",
+		"/Users/grimfor/Eliocity/Eliocity Projects/xee-node-framework/lib/http/box-query.js",
+		"/Users/grimfor/Eliocity/Eliocity Projects/xee-node-framework/lib/model/car.js",
+		"/Users/grimfor/Eliocity/Eliocity Projects/xee-node-framework/lib/model/address.js",
 		"/Users/grimfor/Eliocity/Projects/support/config.json",
 		"/Users/grimfor/Eliocity/Projects/support/routes/event/event.js",
 		"/Users/grimfor/Eliocity/Projects/support/views/event/list.jade",
@@ -246,24 +266,7 @@
 		"/Users/grimfor/Dropbox/serials.md",
 		"/Users/grimfor/Desktop/backup_api_dev_20140123.sql",
 		"/Users/grimfor/Eliocity/Projects/startservers.sh",
-		"/Users/grimfor/Desktop/test.php",
-		"/Users/grimfor/Eliocity/Labs/SlimEventManager/composer.json",
-		"/Users/grimfor/Eliocity/Labs/jsondecode.php",
-		"/Users/grimfor/Eliocity/Projects/XeePushServer/test_cert.sh",
-		"/Users/grimfor/Eliocity/Projects/log.sh",
-		"/Users/grimfor/Dropbox/restarttrial.sh",
-		"/Users/grimfor/Dropbox/serveur/raspbian/blog.grimfor.fr.sh",
-		"/Users/grimfor/Dropbox/serveur/raspbian/arch-raspberry/general.sh",
-		"/Users/grimfor/Dropbox/serveur/raspbian/webserver.sh",
-		"/Users/grimfor/Dropbox/serveur/raspbian/bind9.sh",
-		"/Users/grimfor/Dropbox/serveur/raspbian/general.sh",
-		"/Users/grimfor/Dropbox/jt/result.md",
-		"/Users/grimfor/Dropbox/jt/resume.md",
-		"/Users/grimfor/Desktop/TODO",
-		"/Users/grimfor/Dropbox/serveur/raspbian/arch-raspberry/blog.grimfor.fr",
-		"/Users/grimfor/Desktop/api_dev.sql",
-		"/Users/grimfor/Eliocity/Vagrant/Vagrantfile",
-		"/Users/grimfor/Eliocity/Projects/XeeCoreApi/support/client.php"
+		"/Users/grimfor/Desktop/test.php"
 	],
 	"find":
 	{
@@ -329,13 +332,6 @@
 		"whole_word": false,
 		"wrap": true
 	},
-	"folders":
-	[
-		{
-			"follow_symlinks": true,
-			"path": "/Users/grimfor/Eliocity/Projects/pushserver"
-		}
-	],
 	"groups":
 	[
 		{
@@ -387,7 +383,7 @@
 	{
 		"height": 100.0
 	},
-	"project": "",
+	"project": "pushserver.sublime-project",
 	"replace":
 	{
 		"height": 42.0
