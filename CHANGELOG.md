@@ -1,6 +1,7 @@
 # Changelog
 
 ## r_1.0
+
 - Added version route
 - Updated interface
 - Added logger and email alerts
