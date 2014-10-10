@@ -10,7 +10,6 @@ var apn = require('apn');
 var app = express();
 var ApnManager = require('./lib/apn-manager');
 var GcmManager = require('./lib/gcm-manager');
-var PushManager = require('./lib/push-manager');
 var bodyParser = require('body-parser');
 var gcm = require('node-gcm');
 
