@@ -96,7 +96,32 @@ If you checked out this project from github, you can find a configuration file e
 $ pushserver -c /path/to/config.json
 ```
 
-### 5 - Enjoy!
+### 5 - Preparing certifates
+1. Log-in to the iPhone Developer Program Portal
+
+2. Choose App IDs from the menu on the right (or click here)
+
+3. Create an App ID without a wildcard. For example com.eliocity.testpush
+
+4. Click the Configure link next to this App ID and then click on the button to start the wizard to generate  a new Development Push SSL Certificate (Apple Documentation: Creating the SSL Certificate and Keys)
+
+5. Download this certificate and double click on aps_developer_identity.cer to import it into your Keychain
+
+6. Launch Keychain Assistant (located in Application, Utilities or search for it with Spotlight) and click on My Certificates on the left
+
+7. Expand Apple Development Push Services and select Apple Development Push Services AND your private key (just under Apple Development Push Services)
+
+8. Right-click and choose "Export 2 elements..." and save as Certificate.p12 (don't type a password).
+
+9. Open Terminal and change directory to location used to save Certificate.p12 and convert the PKCS12 certificate bundle into PEM format using this command (press enter when asked for Import Password):
+
+
+        openssl x509 -in aps_development.cer -inform DER -outform PEM -out cert.pem
+        openssl pkcs12 -in Certificate.p12 -out key.pem -nodes
+
+
+
+### 6 - Enjoy!
 
 
 
