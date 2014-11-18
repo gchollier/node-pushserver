@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.0
+
+- First release
+
 ## r_1.0
 - Added version route
 - Updated interface
