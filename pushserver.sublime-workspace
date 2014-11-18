@@ -35,6 +35,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "capistrano/config/deploy/testing.rb",
+			"settings":
+			{
+				"buffer_size": 534,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -132,13 +140,23 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/grimfor/Eliocity/Eliocity Projects/pushserver",
-		"/Users/grimfor/Eliocity/Eliocity Projects/pushserver/public",
-		"/Users/grimfor/Eliocity/Eliocity Projects/pushserver/public/css",
-		"/Users/grimfor/Eliocity/Eliocity Projects/pushserver/public/lib"
+		"/Users/grimfor/Eliocity/EliocityProjects/pushserver",
+		"/Users/grimfor/Eliocity/EliocityProjects/pushserver/capistrano",
+		"/Users/grimfor/Eliocity/EliocityProjects/pushserver/capistrano/config",
+		"/Users/grimfor/Eliocity/EliocityProjects/pushserver/capistrano/config/deploy",
+		"/Users/grimfor/Eliocity/EliocityProjects/pushserver/public",
+		"/Users/grimfor/Eliocity/EliocityProjects/pushserver/public/css"
 	],
 	"file_history":
 	[
+		"/Users/grimfor/Eliocity/EliocityProjects/pushserver/CHANGELOG.md",
+		"/Users/grimfor/Eliocity/EliocityProjects/pushserver/README.md",
+		"/Users/grimfor/Eliocity/EliocityProjects/pushserver/public/css/style.css",
+		"/Users/grimfor/Eliocity/EliocityProjects/pushserver/routes/push.js",
+		"/Users/grimfor/Eliocity/EliocityProjects/pushserver/public/js/push.js",
+		"/Users/grimfor/Eliocity/EliocityProjects/pushserver/public/index.html",
+		"/Users/grimfor/Eliocity/Eliocity Projects/pushserver/public/css/.jshintrc",
+		"/Users/grimfor/Eliocity/Eliocity Projects/pushserver/public/lib/select2.js",
 		"/Users/grimfor/Eliocity/Eliocity Projects/xee-node-framework/README.md",
 		"/Users/grimfor/Eliocity/Eliocity Projects/xee-node-framework/lib/http/client-query.js",
 		"/Users/grimfor/Eliocity/Eliocity Projects/xee-node-framework/lib/http/event-query.js",
@@ -258,19 +276,11 @@
 		"/Users/grimfor/grimfor@grimfor.fr",
 		"/Users/grimfor/Desktop/digital ocean.txt",
 		"/Users/grimfor/Desktop/vps classic ovh 1.txt",
-		"/Users/grimfor/Eliocity/Google Drive/em.sql",
-		"/Users/grimfor/Eliocity/Google Drive/rqt.sql",
-		"/Users/grimfor/dumps/Testing20140321.sql",
-		"/Users/grimfor/Eliocity/Labs/coach/coach/__init__.py",
-		"/Users/grimfor/Eliocity/Koach/besoin.md",
-		"/Users/grimfor/Dropbox/serials.md",
-		"/Users/grimfor/Desktop/backup_api_dev_20140123.sql",
-		"/Users/grimfor/Eliocity/Projects/startservers.sh",
-		"/Users/grimfor/Desktop/test.php"
+		"/Users/grimfor/Eliocity/Google Drive/em.sql"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -335,8 +345,37 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "capistrano/config/deploy/testing.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 534,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								471,
+								471
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
