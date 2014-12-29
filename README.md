@@ -1,5 +1,11 @@
 # Push Server
 
+## Create a certificate
+
+    $ openssl x509 -in cert.cer -inform DER -outform PEM -out cert.pem
+    $ openssl pkcs12 -in key.p12 -out key.pem -nodes
+
+
 ## Eliocity fix and changes
 
     - When a push user is registered we remove all the previous associations with this token.

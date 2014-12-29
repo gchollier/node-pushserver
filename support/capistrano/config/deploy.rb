@@ -2,7 +2,7 @@
 lock '3.2.1'
 
 set :application, 'pushserver'
-set :repo_url, 'git@bitbucket.org:eliocity/xeepushserver.git'
+set :repo_url, 'git@bitbucket.org:eliocity/web-push.git'
 
 # Default branch is :master
 ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
