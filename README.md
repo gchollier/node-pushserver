@@ -52,8 +52,7 @@ If you checked out this project from github, you can find a configuration file e
             "interval": 43200,
             "batchFeedback": true
         }
-    },
-    "api-keys": ["myapikey"],    
+    }, 
     "removeDuplicatedDevices": true
 }
 
