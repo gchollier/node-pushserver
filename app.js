@@ -61,9 +61,6 @@ app.apnManager = apnManager;
 var gcmSender = new gcm.Sender(config.gcm.apiKey);
 var gcmManager = new GcmManager(gcmSender, pushAssociationManager, logger);
 
-
-
-
 apnManager.on('deviceToRemove', function (device){
     // We can no reuse removeDeviceByToken here so me use callback
     logger.info("Received a deviceToRemove event for device " + device);
@@ -74,8 +71,28 @@ apnManager.on('deviceToRemove', function (device){
 var pushManager = new PushManager(apnManager, gcmManager, pushAssociationManager, logger);
 app.pushManager = pushManager;
 
+var apiKeys = config["api-keys"];
+
 // Middleware
 app.use(bodyParser.json());
+
+// a middleware that look for
+app.use(function (req, res, next) {
+    if(req.header("Api-Key")){
+        if(apiKeys.indexOf(req.header("Api-Key")) > -1 ){
+            next();
+        }else{
+            res.status(403);
+            res.send({message: "Invalid authentication credential"});
+        }
+    }else{
+        next();
+
+        // TODO activate it when you do not want to provide public access anymore
+        //res.status(401);
+        //res.send({message: "You did not provide an Api-Key"});
+    }
+});
 
 app.use(express.static(__dirname + '/public'));
 
