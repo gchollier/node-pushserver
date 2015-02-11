@@ -1,6 +1,6 @@
 {
   "name": "node-pushserver",
-  "version": "0.5.3",
+  "version": "1.1.0",
   "description": "Cross-plateform Push Notifications. A project providing a generic API to push messages using Apple's APN and Google's GCM services.",
   "keywords": [
     "push",
@@ -17,7 +17,6 @@
     "body-parser": "~1.8.3",
     "commander": "~1.2.0",
     "winston": "0.7.*",
-    "winston-mail": ">=0.2.9",
     "debug": "~2.0.0"
   },
   "bin": {
