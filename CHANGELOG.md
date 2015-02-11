@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.1
+
+- Removed logger config and email sanding
+- Android device are automatically refreshed or removed if they already exists
+
 ## 1.0.0
 
 - First release

@@ -16,33 +16,11 @@ var gcm = require('node-gcm');
 // Creating logger 
 var transports = [];
 
-if(config.logger === undefined)
-{
-    config.logger = {
-        transposrts : {
-            Console: {
-                timestamp: true,
-                colorize: true,
-                handleExceptions: true
-            }
-        }
-    };
-}
-
-for(var type in config.logger.transports)
-{
-    switch(type)
-    {
-        case 'Mail':
-            transports.push(new (winston.transports.Mail)(config.logger.transports[type]));
-            break;
-        case 'Console':
-            transports.push(new (winston.transports.Console)(config.logger.transports[type]));
-            break;
-        default:
-            console.log("Bad transport type");
-    }
-}
+transports.push(new (winston.transports.Console)({
+    "timestamp": true,
+    "colorize": true,
+    "handleExceptions": true
+}));
 
 var logger = new (winston.Logger)({
     transports: transports
@@ -50,7 +28,7 @@ var logger = new (winston.Logger)({
 
 app.logger = logger;
 
-// Connecting to mongo 
+// Connecting to mongo
 mongoose.connect(config.mongodbUrl);
 
 // When successfully connected
