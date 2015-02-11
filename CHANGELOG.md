@@ -1,9 +1,10 @@
 # Changelog
 
-## 1.0.1
+## 1.1.0
 
 - Removed logger config and email sanding
 - Android device are automatically refreshed or removed if they already exists
+- Created a simple authentication system
 
 ## 1.0.0
 
