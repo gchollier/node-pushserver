@@ -1,0 +1,30 @@
+# Project specific #
+####################
+config.json
+certificates
+
+# Node specific #
+#################
+npm-debug.log
+node_modules
+
+# IDE Specific #
+################
+.idea
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+cert/
+*.sublime-project
+*.sublime-workspace
+
+atlassian-ide-plugin.xml
