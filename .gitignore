@@ -24,7 +24,6 @@ ehthumbs.db
 Thumbs.db
 
 cert/
-config.json
 node_modules/
 
 *.sublime-project
