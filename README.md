@@ -1,17 +1,5 @@
 # Push Server
 
-## Create a certificate
-
-    $ openssl x509 -in cert.cer -inform DER -outform PEM -out cert.pem
-    $ openssl pkcs12 -in key.p12 -out key.pem -nodes
-
-
-## Eliocity fix and changes
-
-    - When a push user is registered we remove all the previous associations with this token.
-
-Push Server is a cross-plateform push server based on [node-apn](https://github.com/argon/node-apn) and [node-gcm](https://github.com/ToothlessGear/node-gcm). Push Server currently supports iOS (APN) and android (GCM) platforms. It uses mongoDB to store the push tokens.
-
 ## Getting started
 
 ### 1 - Database
@@ -64,23 +52,7 @@ If you checked out this project from github, you can find a configuration file e
             "interval": 43200,
             "batchFeedback": true
         }
-    },
-    "logger" : {
-        "transports": {
-            "Console": {
-                "timestamp": true,
-                "colorize": true,
-                "handleExceptions": true
-            },
-            "Mail": {
-                "from": "pushserver@localhost.com",
-                "to": "pushadmin@localhost.com",
-                "host": "smtp.localhost.com",
-                "level": "error",
-                "handleExceptions": true
-            }
-        }
-    },
+    }, 
     "removeDuplicatedDevices": true
 }
 
@@ -123,10 +95,7 @@ $ pushserver -c /path/to/config.json
         openssl pkcs12 -in Certificate.p12 -out key.pem -nodes
 
 
-
 ### 6 - Enjoy!
-
-
 
 ## Usage
 ### Web Interface

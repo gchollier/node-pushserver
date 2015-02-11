@@ -20,8 +20,5 @@
             "batchFeedback": true
         }
     },
-    "api-keys": [
-        "myapikey"
-    ],
     "removeDuplicatedDevices": true
 }

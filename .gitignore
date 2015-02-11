@@ -24,7 +24,7 @@ ehthumbs.db
 Thumbs.db
 
 cert/
-node_modules/
-
 *.sublime-project
 *.sublime-workspace
+
+atlassian-ide-plugin.xml
