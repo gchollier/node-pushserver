@@ -17,7 +17,6 @@
     "body-parser": "~1.8.3",
     "commander": "~1.2.0",
     "winston": "0.7.*",
-    "winston-mail": ">=0.2.9",
     "debug": "~2.0.0"
   },
   "bin": {

@@ -3,7 +3,6 @@ var _ = require('lodash');
 var PushAssociationManager = require('./lib/push-association-manager');
 var PushManager = require('./lib/push-manager');
 var winston = require('winston');
-var winstonEmail = require('winston-mail').Mail;
 var mongoose = require('mongoose');
 var config = GLOBAL.config;
 var apn = require('apn');
