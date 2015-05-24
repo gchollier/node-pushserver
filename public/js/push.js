@@ -30,7 +30,7 @@ $(document).ready(function(){
 
         // Init user list
         toastr.info('Loading users...')
-        $.get('/users', function(data) {
+        $.get('users', function(data) {
             var users = data.users,
                 usersSelect = $('#users');
 
@@ -82,7 +82,7 @@ $(document).ready(function(){
                 pushNotification.ios= JSON.parse(formValues.iosOptions);
 
             $.ajax({
-                url: '/send',
+                url: 'send',
                 type: 'POST',
                 data: JSON.stringify(pushNotification),
                 contentType: 'application/json',

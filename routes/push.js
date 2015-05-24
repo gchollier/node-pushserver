@@ -3,6 +3,10 @@ var router = express.Router();
 var _ = require('lodash');
 var fs = require('fs');
 
+router.get('/', function (req, res) {
+    res.render('index.jade');
+});
+
 router.get('/version', function (req, res) {
     fs.readFile('CHANGELOG.md', 'utf8', function (err,data) {
         if (err) {
@@ -60,7 +64,6 @@ function sendNotifications(notifs, pushController, pushAssociationManager) {
             });
 
         }else{
-
             pushAssociationManager.getAll(function(err, associations){
                 traitSend(err, associations);
             });

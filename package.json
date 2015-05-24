@@ -17,7 +17,9 @@
     "body-parser": "~1.8.3",
     "commander": "~1.2.0",
     "winston": "0.7.*",
-    "debug": "~2.0.0"
+    "debug": "~2.0.0",
+    "basic-auth-parser": "0.0.2",
+    "jade": "1.9.*"
   },
   "bin": {
     "pushserver": "./bin/pushserver.js"

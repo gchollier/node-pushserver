@@ -11,6 +11,7 @@ var ApnManager = require('./lib/apn-manager');
 var GcmManager = require('./lib/gcm-manager');
 var bodyParser = require('body-parser');
 var gcm = require('node-gcm');
+var basic = require('./middlewares/basic');
 
 // Creating logger 
 var transports = [];
@@ -26,6 +27,7 @@ var logger = new (winston.Logger)({
 });
 
 app.logger = logger;
+app.engine('jade', require('jade').__express);
 
 // Connecting to mongo
 mongoose.connect(config.mongodbUrl);
@@ -70,34 +72,29 @@ apnManager.on('deviceToRemove', function (device){
 var pushManager = new PushManager(apnManager, gcmManager, pushAssociationManager, logger);
 app.pushManager = pushManager;
 
-var apiKeys = config["api-keys"];
+app.credentials = config.credentials;
+
+var baseUrl = '/';
+if (config.urlPrefix !== undefined){
+    baseUrl += config.urlPrefix;
+}
+app.baseUrl = baseUrl;
 
 // Middleware
-app.use(bodyParser.json());
+if(config.credentials !== undefined){
+    app.use(basic.Auth);
+}
 
-// a middleware that look for
-app.use(function (req, res, next) {
-    if(req.header("Api-Key")){
-        if(apiKeys.indexOf(req.header("Api-Key")) > -1 ){
-            next();
-        }else{
-            res.status(403);
-            res.send({message: "Invalid authentication credential"});
-        }
-    }else{
-        next();
-
-        // TODO activate it when you do not want to provide public access anymore
-        //res.status(401);
-        //res.send({message: "You did not provide an Api-Key"});
-    }
+app.use(function(req, res, next) {
+    res.locals.baseUrl = req.app.baseUrl;
+    next();
 });
 
-app.use(express.static(__dirname + '/public'));
-
+app.use(bodyParser.json());
+app.use(app.baseUrl+"/public", express.static(__dirname + '/public'));
 app.use(function(err, req, res, next) {
-    res.status(500);
-    res.render('error', { error: err });
+    console.log(err);
+    res.status(500).send('error', { error: err });
 });
 
 app.post('/*', function (req, res, next) {
@@ -108,8 +105,7 @@ app.post('/*', function (req, res, next) {
     }
 });
 
-app.use('/', require('./routes/push'));
-app.use('/', require('./routes/association'));
-
+app.use(app.baseUrl, require('./routes/push'));
+app.use(app.baseUrl, require('./routes/association'));
 
 module.exports = app;

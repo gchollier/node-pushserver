@@ -20,5 +20,18 @@
             "batchFeedback": true
         }
     },
-    "removeDuplicatedDevices": true
+    "removeDuplicatedDevices": true,
+    "urlPrefix": "myapp",
+    "credentials": [
+        {
+            "user": "user1",
+            "password": "password1",
+            "scopes": ["register", "send"]
+        },
+        {
+            "user": "user2",
+            "password": "password2",
+            "scopes": ["register"]
+        }
+    ]
 }
